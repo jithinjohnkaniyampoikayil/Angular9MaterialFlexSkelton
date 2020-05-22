@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { PostComponent } from './modules/post/post.component';
+import { ExpenditureComponent } from './modules/expenditure/expenditure.component';
 
 
 const routes: Routes = [
@@ -16,10 +17,14 @@ const routes: Routes = [
     {
       path:'post',
     component:PostComponent
-  }]
+    },
+    {
+      path:'expenditure',
+    component:ExpenditureComponent
+    }]
 
   }
-];
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

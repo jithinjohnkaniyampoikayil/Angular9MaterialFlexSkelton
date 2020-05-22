@@ -20,11 +20,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
 ];
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss']
+  selector: 'app-expenditure',
+  templateUrl: './expenditure.component.html',
+  styleUrls: ['./expenditure.component.scss']
 })
-export class PostComponent implements OnInit {
+export class ExpenditureComponent implements OnInit {
 
   constructor() { }
 
@@ -37,5 +37,4 @@ export class PostComponent implements OnInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-
 }
