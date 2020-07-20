@@ -4,12 +4,15 @@ import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { PostComponent } from './modules/post/post.component';
 import { ExpenditureComponent } from './modules/expenditure/expenditure.component';
+import { LoginComponent } from './modules/login/login.component';
+import { AuthGuard } from './helpers/auth.guard';
 
 
 const routes: Routes = [
   {
     path:'',
     component:DefaultComponent,
+    canActivate: [AuthGuard],
     children:[{
       path:'',
       component:DashboardComponent
@@ -23,6 +26,10 @@ const routes: Routes = [
     component:ExpenditureComponent
     }]
 
+  },
+  {
+    path:'login',
+    component:LoginComponent
   }
   ];
 
